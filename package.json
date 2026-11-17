@@ -1,0 +1,13 @@
+{
+  "name": "factorial-program",
+  "version": "1.0.0",
+  "description": "A Node.js factorial program for GitHub, Docker and Jenkins practice",
+  "main": "factorial.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node factorial.js 5",
+    "test": "node --test"
+  },
+  "keywords": ["factorial", "devops"],
+  "license": "MIT"
+}

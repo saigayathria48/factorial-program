@@ -14,11 +14,15 @@ function factorial(n) {
   return result;
 }
 
-const n = Number(process.argv[2]);
+if (require.main === module) {
+  const n = Number(process.argv[2] ?? 5);
 
-try {
-  console.log(`Factorial of ${n} = ${factorial(n)}`);
-} catch (error) {
-  console.error(error.message);
-  process.exitCode = 1;
+  try {
+    console.log(`Factorial of ${n} = ${factorial(n)}`);
+  } catch (error) {
+    console.error(error.message);
+    process.exitCode = 1;
+  }
 }
+
+module.exports = { factorial };
